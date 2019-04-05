@@ -1,4 +1,26 @@
-console.log('This is the line of code that is ran first when the page loads');
+$(document).ready(function(){
+    $('.addTask').click(function(){
+        var inputText =$('#inputField').val();
+        $('.addedTasks .taskList').append('<li>' + inputText + 
+        '<button class="markAsDone">Done</button></li>');
+        $('#inputField').val('');
+        $('.markAsDone').click(function(){
+            var inputText = this.parentNode.innerText;
+            $('.doneTasks .taskList').append('<li>' + inputText + '<button class="removeTask">Done</button>');
+            this.parentNode.remove();
+            $('.removeTask').click(function(){
+                this.parentNode.remove();
+            });
+        });
+    });
+
+    $(document).on('click', '.markAsDone', function(){
+        var inputText = this.parentNode.innerText;
+    })
+});
+
+
+/*console.log('This is the line of code that is ran first when the page loads');
 console.log('This is the second line of code that is ran when the page loads');
 
 function sampleFunction() {
@@ -19,4 +41,4 @@ function nextFunction() {
         console.log('The value of i is currently: ' + i);
     }
     console.log('One this line is reached, the value of i is: ' + 0)
-}
+}*/

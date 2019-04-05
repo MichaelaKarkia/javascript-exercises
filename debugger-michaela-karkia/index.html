@@ -7,9 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    I will just create a sample text here
+    <form>
+        First name: <input id="inputField" type="text" name="ToDoTask"
+        value="Enter task name here"><br>
+    </form>
+
+    <button class="addTask" type="button">Add task</button>
+
+    <div>These are to do tasks</div>
+    <div class="addedTasks">
+        <ul class="taskList">
+            <li>Sample task <button type="markAsDone">Done</button></li>
+        </ul>
+    </div>
+
+    <div>These are completed tasks</div>
+    <div class="doneTasks">
+        <ul class="taskList">
+            <li>Sample task <button type="markAsDone">Remove task</button></li>
+        </ul>
+    </div>
 </body>
 </html>
